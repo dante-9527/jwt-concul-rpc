@@ -1,0 +1,24 @@
+syntax = "proto3"; // 声明使用v3版本的语法
+
+package pb;
+
+option go_package = "jwt-consul-rpc-server/pb;pb";
+
+// 定义服务
+service GetInfo {
+    // 查询信息 方法
+    rpc QueryInfo (QueryRequest) returns (QueryResponse) {}
+}
+
+// 请求消息
+message QueryRequest {
+    int64 s_id = 1;
+    string s_name = 2;
+}
+
+// 响应信息
+message QueryResponse {
+    int32 code = 1;
+    string s_name = 2;
+    int32 s_age = 3;
+}
