@@ -18,6 +18,13 @@ type server struct {
 func (s *server) QueryInfo(ctx context.Context, in *pb.QueryRequest) (*pb.QueryResponse, error) {
 	reply := new(pb.QueryResponse)
 	// 根据传递进来的id或者Name去数据库进行查询
+	// 获取metadata，校验jwt
+
+	// 获取数据进行校验 id
+
+	// 连接mysql进行查询
+
+	// 返回结果
 	reply.Code = 0
 	reply.SAge = 18
 	reply.SName = "dante"
